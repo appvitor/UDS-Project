@@ -5,7 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { ProdutoDetalhesComponent } from './produto-detalhes/produto-detalhes.component';
-import { ProdutoService } from './produto.service'
+import { ProdutoService } from './produto.service';
+import { AppRoutingModule } from './/app-routing.module'
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ProdutoService } from './produto.service'
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [ ProdutoService ],
   bootstrap: [AppComponent]
