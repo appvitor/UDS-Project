@@ -1,0 +1,17 @@
+<div>
+	<h2>Produtos Cadastrados</h2>
+	<ul class = "produtos">
+		<li *ngFor = "let produto of produtos" (click) = "onSelect(produto)"
+		 [class.selected] = "produto === produtoSelecionado" class = "detalhes" >
+			<div class = "nomeProduto"><span></span>{{produto.nome | uppercase}}</div>
+			<br>
+			<div><span>Código: </span>{{produto.codigo}}</div>
+			<div><span>Data de Compra: </span>{{produto.dataDeCompra}}</div>
+			<div><span>Data de Vencimento: </span>{{produto.dataDeValidade}}</div>
+			<div><span>Preço R$ </span>{{produto.preco}}</div>
+			<br>
+		</li>
+	</ul>	
+</div>
+
+<app-produto-detalhes [produto]="produtoSelecionado"></app-produto-detalhes>

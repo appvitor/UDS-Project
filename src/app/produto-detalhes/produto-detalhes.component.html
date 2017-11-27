@@ -1,0 +1,13 @@
+<div *ngIf = "produto">
+	<h2>{{ produto.nome | uppercase }}</h2>
+	<h2>{{ produto.codigo | uppercase }}</h2>
+	<h2>{{ produto.dataDeCompra | uppercase }}</h2>
+	<h2>{{ produto.dataDeValidade | uppercase }}</h2>
+	<div>
+		<input [(ngModel)]="produto.nome" placeholder="nome">
+		<input [(ngModel)]="produto.codigo" placeholder="código">
+		<input [(ngModel)]="produto.dataDeCompra" placeholder="data compra">
+		<input [(ngModel)]="produto.dataDeValidade" placeholder="data vencimento">
+		<input [(ngModel)]="produto.preco" placeholder="preço">    
+	</div>	
+</div>
