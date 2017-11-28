@@ -8,8 +8,6 @@ import { ProdutoService } from '../produto.service';
 	styleUrls: ['./produtos.component.css']
 })
 export class ProdutosComponent implements OnInit {
-
-	produtoSelecionado: Produto;
 	
 	produtos: Produto[];
 
@@ -19,12 +17,9 @@ export class ProdutosComponent implements OnInit {
 		this.getProdutos();
 	}
 
-	onSelect(produto: Produto): void {
-		this.produtoSelecionado = produto;
-	}
-
 	getProdutos(): void {
-		this.produtos = this.produtoService.getProdutos();
+		this.produtos = this.produtoService.getProdutos()
+			.subscribe(produtos => this.produtos = produtos);
 	}
 
 }

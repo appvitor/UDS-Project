@@ -7,7 +7,8 @@ import { ProdutosComponent } from './produtos/produtos.component';
 import { ProdutoDetalhesComponent } from './produto-detalhes/produto-detalhes.component';
 import { ProdutoService } from './produto.service';
 
-import { AppRoutingModule } from './app-routing.module'
+import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component'
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { AppRoutingModule } from './app-routing.module'
   declarations: [
     AppComponent,
     ProdutosComponent,
-    ProdutoDetalhesComponent
+    ProdutoDetalhesComponent,
+    DashboardComponent
   ],
   providers: [ ProdutoService ],
   bootstrap: [ AppComponent ]

@@ -1,15 +1,14 @@
 <div>
 	<h2>Produtos Cadastrados</h2>
 	<ul class = "produtos">
-		<li *ngFor = "let produto of produtos" (click) = "onSelect(produto)"
-		 [class.selected] = "produto === produtoSelecionado" class = "detalhes" >
-			<div class = "nomeProduto"><span></span>{{produto.nome | uppercase}}</div>
-			<br>
-			<div><span>Código: </span>{{produto.codigo}}</div>
-			<div><span>Preço Unitário R$ </span>{{produto.precoUnitario}}</div>
-			<br>
+		<li *ngFor = "let produto of produtos" class = "detalhes" >
+			<a routerLink="/detalhes/{{produto.id}}">
+				<div class = "nomeProduto"><span></span>{{produto.nome | uppercase}}</div>
+				<br>
+				<div><span>Código: </span>{{produto.codigo}}</div>
+				<div><span>Preço Unitário R$ </span>{{produto.precoUnitario}}</div>
+				<br>
+			</a>
 		</li>
 	</ul>	
 </div>
-
-<app-produto-detalhes [produto]="produtoSelecionado"></app-produto-detalhes>
