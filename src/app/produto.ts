@@ -1,7 +1,6 @@
 export class Produto{
-	codigo: number;
+	id: UUID;
+	codigo: string;
 	nome: string;
-	preco: float;
-	dataDeCompra: date;
-	dataDeValidade: date;
+	precoUnitario: double;
 }
