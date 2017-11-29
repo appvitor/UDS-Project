@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Produto }			from '../produto';
-import { ProdutoService } 	from '../produto.service';
+import { Component, OnInit } 	from '@angular/core';
+import { Produto } 				from '../produto';
+import { ProdutoService } 		from '../produto.service';
 
 @Component({
 	selector: 'app-dashboard',
@@ -9,9 +9,9 @@ import { ProdutoService } 	from '../produto.service';
 })
 export class DashboardComponent implements OnInit {
 
-	produto: Produto[] = [];
+	produtos: Produto[] = [];
 
-	constructor(private ProdutoService: ProdutoService) { }
+	constructor(private produtoService: ProdutoService) { }
 
 	ngOnInit() {
 		this.getProdutos();

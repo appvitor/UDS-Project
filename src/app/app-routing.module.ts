@@ -7,13 +7,14 @@ import { ProdutoDetalhesComponent } from './produto-detalhes/produto-detalhes.co
 
 const routes: Routes = [
 	{ path: '', redirectTo: '/dashboard', pathMatch: 'full'},
-	{ path: 'dashboard', 	component: 'DashboardComponent' },
-	{ path: 'produtos', 	component: 'ProdutosComponent' },
-	{ path: 'detalhes/:id', component: 'ProdutoDetalhesComponent'}
+	{ path: 'dashboard', component: DashboardComponent },
+	{ path: 'produtos', component: ProdutosComponent },
+	{ path: 'detalhes/:id', component: ProdutoDetalhesComponent}
 ];
 
 @NgModule({
 	imports: [ RouterModule.forRoot(routes) ],
 	exports: [ RouterModule ]
 })
+
 export class AppRoutingModule { }
