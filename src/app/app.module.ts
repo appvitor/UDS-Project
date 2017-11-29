@@ -1,14 +1,16 @@
-import { NgModule } from '@angular/core';
+import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule }   from '@angular/forms';
 
-import { AppComponent } from './app.component';
-import { ProdutosComponent } from './produtos/produtos.component';
+import { AppComponent }             from './app.component';
+import { DashboardComponent }       from './dashboard/dashboard.component'
+import { ProdutosComponent }        from './produtos/produtos.component';
 import { ProdutoDetalhesComponent } from './produto-detalhes/produto-detalhes.component';
-import { ProdutoService } from './produto.service';
+import { ProdutoService }           from './produto.service';
 
 import { AppRoutingModule } from './app-routing.module';
-import { DashboardComponent } from './dashboard/dashboard.component'
+import { MessagesComponent } from './messages/messages.component';
+import { MessageService } from './message.service';
 
 @NgModule({
   imports: [
@@ -20,9 +22,10 @@ import { DashboardComponent } from './dashboard/dashboard.component'
     AppComponent,
     ProdutosComponent,
     ProdutoDetalhesComponent,
-    DashboardComponent
+    DashboardComponent,
+    MessagesComponent
   ],
-  providers: [ ProdutoService ],
+  providers: [ ProdutoService, MessageService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

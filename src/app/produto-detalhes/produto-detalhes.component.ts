@@ -2,8 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } 			from '@angular/router';
 import { Location } 				from '@angular/common';
 
-import { Produto } from '../produto';
-import { ProdutoService } from '../produto.service';
+import { Produto } 			from '../produto';
+import { ProdutoService } 	from '../produto.service';
 
 @Component({
 	selector: 'app-produto-detalhes',
