@@ -1,9 +1,8 @@
 <div *ngIf = "produto">
-	<h2>{{ produto.nome | uppercase }}</h2>
-	<h2>{{ produto.codigo | uppercase }}</h2>
 	<div>
 		<input [(ngModel)]="produto.nome" placeholder="nome">
 		<input [(ngModel)]="produto.codigo" placeholder="código">
 		<input [(ngModel)]="produto.precoUnitario" placeholder="preço">    
 	</div>	
 </div>
+<button (click)="voltarPagina()">Voltar</button>

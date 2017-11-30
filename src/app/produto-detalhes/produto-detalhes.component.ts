@@ -30,4 +30,8 @@ export class ProdutoDetalhesComponent implements OnInit {
 			.subscribe(produto => this.produto = produto);
 	}
 
+	voltarPagina(): void{
+		this.location.back();
+	}
+
 }

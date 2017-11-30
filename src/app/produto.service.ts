@@ -1,6 +1,7 @@
 import { Injectable } 	from '@angular/core';
 import { Observable } 	from 'rxjs/Observable';
 import { of } 			from 'rxjs/observable/of';
+import { v4 as uuid } 	from 'uuid';
 
 import { MessageService } 	from './message.service'
 import { produto } 			from './produto';
