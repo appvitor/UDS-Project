@@ -5,8 +5,8 @@ export class MessageService {
 
 	messages: string[] = [];
 
-	add(messages: string){
-		this.messages.push(messages);
+	add(message: string){
+		this.messages.push(message);
 	}
 
 	clear() {

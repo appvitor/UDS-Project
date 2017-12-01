@@ -10,7 +10,7 @@ import { PRODUTOS } 		from './mock-produtos';
 @Injectable()
 export class ProdutoService {
 
-	constructor(private messageService: MessageService ) { }
+	constructor(private messageService: MessageService) { }
 
 	getProdutos(): Observable<Produto[]> {
 		this.messageService.add('ProdutoService: fetched produtos');
