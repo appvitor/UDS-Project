@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Produto } from '../produto';
-import { ProdutoService } from '../produto.service';
+import { Component, OnInit } 	from '@angular/core';
+import { Produto } 				from '../produto';
+import { ProdutoService } 		from '../produto.service';
+import { v4 as uuid } 			from 'uuid';
 
 @Component({
 	selector: 'app-produtos',

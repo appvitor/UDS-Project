@@ -4,7 +4,7 @@ import { of } 			from 'rxjs/observable/of';
 import { v4 as uuid } 	from 'uuid';
 
 import { MessageService } 	from './message.service'
-import { produto } 			from './produto';
+import { Produto } 			from './produto';
 import { PRODUTOS } 		from './mock-produtos';
 
 @Injectable()
@@ -17,7 +17,7 @@ export class ProdutoService {
 		return of(PRODUTOS);
 	}
 
-	getProduto(id: UUID): Observable<Produto> {
+	getProduto(id: uuid): Observable<Produto> {
 		this.messageService.add('ProdutoService: fetched produto id=${id}');
 		return of(PRODUTOS.find(produto => produto.id === id));
 	}

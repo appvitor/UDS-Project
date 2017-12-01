@@ -1,6 +1,8 @@
+import { v4 as uuid } from 'uuid';
+
 export class Produto{
-	id: UUID;
+	id: uuid;
 	codigo: string;
 	nome: string;
-	precoUnitario: double;
+	precoUnitario: number;
 }
