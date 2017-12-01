@@ -1,14 +1,14 @@
 <div>
 	<h3>Produtos Cadastrados</h3>
-	<ul class = "produtos">
-		<li *ngFor = "let produto of produtos" class = "detalhes" >
-			<a routerLink="/detalhes/{{produto.id}}">
-				<div class = "nomeProduto"><span></span>{{produto.nome | uppercase}}</div>
+	<div class = "grid grid-pad">
+		<a *ngFor = "let produto of produtos" routerLink="/detalhes/{{produto.id}}" class = "col-1-4">
+			<div class = "module produto">
+				<div class= "nomeProduto"><span></span>{{produto.nome | uppercase}}</div>
 				<br>
 				<div><span>Código: </span>{{produto.codigo}}</div>
-				<div><span>Preço Unitário R$ </span>{{produto.precoUnitario}}</div>
+				<div><span>Preço Unitário R$ </span>{{produto.precoUnitario.toFixed(2)}}</div>
 				<br>
-			</a>
-		</li>
-	</ul>	
+			</div>
+		</a>
+	</div>	
 </div>
