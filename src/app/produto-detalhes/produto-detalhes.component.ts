@@ -20,11 +20,11 @@ export class ProdutoDetalhesComponent implements OnInit {
 		private produtoService: ProdutoService
 	) { }
 
-	ngOnInit() {
+	ngOnInit(): void {
 		this.getProduto();
 	}
 
-	getProduto() {
+	getProduto(): void {
 		const id = +this.route.snapshot.paramMap.get('id');
 		this.produtoService.getProduto(id)
 			.subscribe(produto => this.produto = produto);

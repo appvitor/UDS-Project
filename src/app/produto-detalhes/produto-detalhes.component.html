@@ -1,8 +1,13 @@
 <div *ngIf = "produto">
 	<div>
-		<input [(ngModel)]="produto.nome" placeholder="nome">
-		<input [(ngModel)]="produto.codigo" placeholder="código">
-		<input [(ngModel)]="produto.precoUnitario" placeholder="preço">    
-	</div>	
+		<label>Nome </label>
+			<input [(ngModel)]="produto.nome"/>
+		<label>Código
+			<input [(ngModel)]="produto.codigo"/>
+		</label>
+		<label>Preço Unitário
+			<input [(ngModel)]="produto.precoUnitario"/>    
+		</label>
+	</div>
 </div>
 <button (click)="voltarPagina()">Voltar</button>
