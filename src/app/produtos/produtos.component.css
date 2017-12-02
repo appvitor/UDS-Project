@@ -60,3 +60,24 @@ h3 {
 .nomeProduto{
   font-weight: bold;
 }
+button {
+  padding: 5px 10px;
+  margin-top: 10px;
+  display: inline-block;
+  color: #607D8B;
+  background-color: #eee;
+  background: none;
+  border-radius: 10px;
+  margin-left: 1em;
+}
+button:hover {
+  color: #7e13c1;
+  background-color: #CFD8DC;
+  cursor: pointer;
+}
+.formProdutoNovo {
+  text-align: center;
+}
+.formProdutoNovo label {
+  margin-left: 1em; 
+}

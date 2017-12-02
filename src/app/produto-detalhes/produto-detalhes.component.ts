@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } 			from '@angular/router';
 import { Location } 				from '@angular/common';
+import { v4 as uuid } 				from 'uuid';
 
 import { Produto } 			from '../produto';
 import { ProdutoService } 	from '../produto.service';
@@ -33,5 +34,4 @@ export class ProdutoDetalhesComponent implements OnInit {
 	voltarPagina(): void{
 		this.location.back();
 	}
-
 }

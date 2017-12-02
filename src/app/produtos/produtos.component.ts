@@ -10,6 +10,7 @@ import { v4 as uuid } 			from 'uuid';
 })
 export class ProdutosComponent implements OnInit {
 	
+	novoProduto: Produto;
 	produtos: Produto[];
 
 	constructor(private produtoService: ProdutoService) { }
@@ -21,6 +22,12 @@ export class ProdutosComponent implements OnInit {
 	getProdutos(): void {
 		this.produtoService.getProdutos()
 			.subscribe(produtos => this.produtos = produtos);
+	}
+
+	putProduto(novoProduto: Produto): void {
+		novoProduto.id = uuid();
+		this.produtoService.putProduto(novoProduto);
+		this.getProdutos();
 	}
 
 }

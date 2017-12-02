@@ -12,14 +12,19 @@ export class ProdutoService {
 
 	constructor(private messageService: MessageService) { }
 
+	getProduto(id: uuid): Observable<Produto> {	
+		this.messageService.add(`ProdutoService: fetched produto id=${id}`);
+		return of(PRODUTOS.find(produto => produto.id === id));
+	}
+
 	getProdutos(): Observable<Produto[]> {
-		this.messageService.add('ProdutoService: fetched produtos');
+		this.messageService.add(`ProdutoService: fetched produtos`);
 		return of(PRODUTOS);
 	}
 
-	getProduto(id: uuid): Observable<Produto> {
-		this.messageService.add(`ProdutoService: fetched produto id=${id}`);
-		return of(PRODUTOS.find(produto => produto.id === id));
+	putProduto(novoProduto: Produto): void {
+		this.messageService.add(`ProdutoService: fetched produto`);
+		PRODUTOS.push(novoProduto);
 	}
 
 }

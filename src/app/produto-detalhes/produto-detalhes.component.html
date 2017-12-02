@@ -1,12 +1,13 @@
+<h3>Detalhes do Produto</h3>
 <div *ngIf = "produto">
 	<div>
 		<label>Nome </label>
-			<input [(ngModel)]="produto.nome"/>
+			<input type="text" [(ngModel)]="produto.nome"/>
 		<label>Código
-			<input [(ngModel)]="produto.codigo"/>
+			<input type="text" [(ngModel)]="produto.codigo"/>
 		</label>
 		<label>Preço Unitário
-			<input [(ngModel)]="produto.precoUnitario"/>    
+			<input type="number" [(ngModel)]="produto.precoUnitario"/>    
 		</label>
 	</div>
 </div>
