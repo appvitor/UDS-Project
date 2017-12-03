@@ -24,9 +24,8 @@ export class ProdutosComponent implements OnInit {
 			.subscribe(produtos => this.produtos = produtos);
 	}
 
-	putProduto(novoProduto: Produto): void {
-		novoProduto.id = uuid();
-		this.produtoService.putProduto(novoProduto);
+	putProduto(): void {
+		this.produtoService.putProduto(this.novoProduto);
 		this.getProdutos();
 	}
 
