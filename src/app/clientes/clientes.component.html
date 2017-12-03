@@ -10,7 +10,7 @@
 		<button (click)="putCliente()">Salvar Cliente Novo</button>
 	</div>
 	<div class = "grid grid-pad">
-		<a *ngFor = "let cliente of clientes" routerLink="/clientes/{{cliente.id}}" class = "col-1-4">
+		<a *ngFor = "let cliente of clientes" routerLink="/clienteDetalhes/{{cliente.id}}" class = "col-1-4">
 			<div class = "module cliente">
 				<div class= "nomeCliente"><span></span>{{cliente.nome | uppercase}}</div>
 				<br>

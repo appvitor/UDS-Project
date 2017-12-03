@@ -14,6 +14,7 @@ import { ProdutoDetalhesComponent } from './produto-detalhes/produto-detalhes.co
 import { ProdutoService }           from './produto.service';
 import { ClientesComponent }        from './clientes/clientes.component';
 import { ClienteService }           from './cliente.service';
+import { ClienteDetalhesComponent } from './cliente-detalhes/cliente-detalhes.component';
 
 @NgModule({
   imports: [
@@ -27,7 +28,8 @@ import { ClienteService }           from './cliente.service';
     ProdutoDetalhesComponent,
     DashboardComponent,
     MessagesComponent,
-    ClientesComponent
+    ClientesComponent,
+    ClienteDetalhesComponent
   ],
   providers: [ ProdutoService, ClienteService, MessageService],
   bootstrap: [ AppComponent ]

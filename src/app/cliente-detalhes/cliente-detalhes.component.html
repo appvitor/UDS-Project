@@ -1,0 +1,11 @@
+<h3>Detalhes do Cliente</h3>
+<div *ngIf = "cliente">
+	<div>
+		<label>Nome </label>
+			<input type="text" [(ngModel)]="cliente.nome"/>
+		<label>Data de Nascimento 
+			<input type="date" [(ngModel)]="cliente.dataNascimento"/>    
+		</label>
+	</div>
+</div>
+<button (click)="voltarPagina()">Voltar</button>
