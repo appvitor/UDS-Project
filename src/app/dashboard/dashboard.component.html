@@ -1,8 +1,16 @@
 <h3>Top Produtos</h3>
 <div class="grid grid-pad">
-	<a *ngFor="let produto of produtos" class="col-1-4" routerLink="/detalhes/{{produto.id}}">
-		<div class="module produto">
+	<a *ngFor="let produto of produtos" class="col-1-4" routerLink="/produtoDetalhes/{{produto.id}}">
+		<div class="module">
 			<h4> {{ produto.nome }} </h4>
+		</div>
+	</a>
+</div>
+<h3>Top Clientes</h3>
+<div class="grid grid-pad">
+	<a *ngFor="let cliente of clientes" class="col-1-4" routerLink="/clienteDetalhes/{{cliente.id}}">
+		<div class="module">
+			<h4> {{ cliente.nome }} </h4>
 		</div>
 	</a>
 </div>

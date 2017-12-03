@@ -12,13 +12,13 @@ export class ClienteService {
 
 	constructor(private messageService: MessageService) { }
 
-	getCliente(id: uuid): Obesevable<Cliente> {
+	getCliente(id: uuid): Observable<Cliente> {
 		this.messageService.add(`ClienteService: fetched cliente id=${id}`);
 		return of(CLIENTES.find(cliente => cliente.id === id));
 	}
 
 	getClientes(): Observable<Cliente[]> {
-		this.messageService.add(`ClienteService: fetched clientes);
+		this.messageService.add(`ClienteService: fetched clientes`);
 		return of(CLIENTES);
 	}
 

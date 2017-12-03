@@ -3,16 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 import { v4 as uuid }    from 'uuid';
 
+import { AppRoutingModule }   from './app-routing.module';
+import { MessagesComponent }  from './messages/messages.component';
+import { MessageService }     from './message.service';
+
 import { AppComponent }             from './app.component';
 import { DashboardComponent }       from './dashboard/dashboard.component'
 import { ProdutosComponent }        from './produtos/produtos.component';
 import { ProdutoDetalhesComponent } from './produto-detalhes/produto-detalhes.component';
 import { ProdutoService }           from './produto.service';
-
-import { AppRoutingModule }   from './app-routing.module';
-import { MessagesComponent }  from './messages/messages.component';
-import { MessageService }     from './message.service';
-import { ClientesComponent } from './clientes/clientes.component';
+import { ClientesComponent }        from './clientes/clientes.component';
+import { ClienteService }           from './cliente.service';
 
 @NgModule({
   imports: [
@@ -28,7 +29,7 @@ import { ClientesComponent } from './clientes/clientes.component';
     MessagesComponent,
     ClientesComponent
   ],
-  providers: [ ProdutoService, MessageService ],
+  providers: [ ProdutoService, ClienteService, MessageService],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
