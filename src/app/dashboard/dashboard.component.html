@@ -14,3 +14,11 @@
 		</div>
 	</a>
 </div>
+<h3>Últimos Pedidos</h3>
+<div class="grid grid-pad">
+	<a *ngFor="let pedido of pedidos" class="col-1-4" routerLink="/pedidoDetalhes/{{pedido.id}}">
+		<div class="module">
+			<h4> {{ pedido.numero }} </h4>
+		</div>
+	</a>
+</div>
