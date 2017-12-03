@@ -12,6 +12,7 @@ import { ProdutoService }           from './produto.service';
 import { AppRoutingModule }   from './app-routing.module';
 import { MessagesComponent }  from './messages/messages.component';
 import { MessageService }     from './message.service';
+import { ClientesComponent } from './clientes/clientes.component';
 
 @NgModule({
   imports: [
@@ -24,7 +25,8 @@ import { MessageService }     from './message.service';
     ProdutosComponent,
     ProdutoDetalhesComponent,
     DashboardComponent,
-    MessagesComponent
+    MessagesComponent,
+    ClientesComponent
   ],
   providers: [ ProdutoService, MessageService ],
   bootstrap: [ AppComponent ]
