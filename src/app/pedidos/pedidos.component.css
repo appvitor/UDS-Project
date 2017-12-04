@@ -57,7 +57,7 @@ h3 {
     min-width: 60px;
   }
 }
-.nomeCliente{
+.numeroPedido{
   font-weight: bold;
 }
 button {
@@ -74,10 +74,4 @@ button:hover {
   color: #7e13c1;
   background-color: #CFD8DC;
   cursor: pointer;
-}
-.formClienteNovo {
-  text-align: center;
-}
-.formClienteNovo label {
-  margin-left: 1em; 
 }

@@ -26,6 +26,7 @@ export class ClientesComponent implements OnInit {
 	}
 
 	putCliente(): void {
+		this.novoCliente.id = uuid();
 		this.clienteService.putCliente(this.novoCliente);
 		this.getClientes();
 	}

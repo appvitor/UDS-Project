@@ -26,6 +26,7 @@ export class ProdutosComponent implements OnInit {
 	}
 
 	putProduto(): void {
+		this.novoProduto.id = uuid();
 		this.produtoService.putProduto(this.novoProduto);
 		this.getProdutos();
 	}
