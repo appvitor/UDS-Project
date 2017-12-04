@@ -1,7 +1,9 @@
 import { Pedido } 			from './pedido';
 import { Cliente } 			from './cliente';
 import { ClienteService } 	from './cliente.service';
+import { ItemPedido } 		from '.itemPedido';
 import { v4 as uuid } 		from 'uuid';
+
 
 export var clienteService: ClienteService;
 
