@@ -1,0 +1,36 @@
+Teste Desenvolvedor UDS
+
+Elaborar uma aplicação com os seguintes casos de uso:
+1.Manter Produto: CRUD simples da entidade 
+Produto (id: UUID, código: String, nome: String, preçoUnitário: Double).
+a.Todos os atributos são obrigatórios.
+b.ID, Código e nome não podem se repetir.
+c.Preço é monetário e deve ser maior que zero.
+d.Deve ser possível pesquisar os produtos por qualquer atributo, exceto pelo id.
+
+2.Manter Pessoa: CRUD simples da entidade 
+Pessoa (id: UUID, nome: String, dataNascimento: Date).
+a.Todos os atributos são obrigatórios.
+b.ID e Nome não podem se repetir.
+c.Deve ser possível pesquisar as pessoas por qualquer atributo, exceto pelo id.
+
+3.Registrar Pedido de Venda: permite incluir ou excluir um pedido de venda, sabendo que o 
+Pedido (id: UUID, cliente: Pessoa, número: Integer/Autoincremento, emissão: Date, total: Double) 
+contém um ou mais 
+ItemPedido (id: UUID, produto: Produto, quantidade : Double, 
+preçoUnitário : Double/recuperado do produto, percentualDesconto : Double, total : Double).
+a.Todos os atributos são obrigatórios.
+b.IDs não podem se repetir.
+c.Todos os valores numéricos devem ser tratados com duas casas decimais e devem 
+ser > 0 (exceto desconto, que pode ser >= 0).
+d.Preço e totais são monetários.
+e.Deve ser possível pesquisar os pedidos por qualquer atributo, exceto pelo id.
+
+Detalhes importantes:
+Implemente nas tecnologias e frameworks para as quais você está se candidatando.
+Se o seu teste seletivo for para front-end, implemente a aplicação com dados transientes (em memória) 
+ou em armazenamento local ou usando uma mock API.
+Todo seu código deverá estar disponível no Github.
+O uso de testes automatizados será considerado na avaliação.
+Caso não consiga implementar todos os casos de uso, entregue o máximo que conseguir com a melhor qualidade 
+possível.
